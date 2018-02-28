@@ -1,0 +1,20 @@
+<% include partials/header %>
+    <h1>Welcome to results page</h1>
+    <ol>
+        <% data["Search"].forEach( function (movies) { %>
+            <li>
+                <ul>
+                    <li>
+                        <img src=<%= movies["Poster"] %>>
+                    </li>
+                    <li>
+                        <%= movies["Title"] %>
+                    </li>
+                    <li>
+                        <%= movies["Year"] %>
+                    </li>
+                </ul>
+            </li>
+        <% }); %>
+    </ol>
+<% include partials/footer %>
