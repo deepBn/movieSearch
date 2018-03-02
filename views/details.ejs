@@ -4,18 +4,20 @@
             <div class="thumbnail right-caption col-sm-12">
                 <img src=<%= data["Poster"] %> alt="movie-image">
                 <div class="caption">
-                    <h3><%= data["Title"] %> (<%= data["Year"] %>)</h3>
-                    <p>
-                        <%= data["Rated"] %> | 
-                        <%= data["Runtime"] %> | 
-                        <%= data["Genre"] %> | 
-                        <%= data["Released"] %> ( <%= data["Country"] %> )
-                    </p>
+                    <h1><%= data["Title"] %> (<%= data["Year"] %>)</h1>
+                    <div id="small-details">
+                        <p>
+                            <%= data["Rated"] %> | 
+                            <%= data["Runtime"] %> | 
+                            <%= data["Genre"] %> | 
+                            <%= data["Released"] %> ( <%= data["Country"] %> )
+                        </p>
+                    </div>
                     <p><%= data["Plot"] %></p>
                     <div id="crew">
-                        <p>Director: <%= data["Director"] %></p>
-                        <p>Writer: <%= data["Writer"] %></p>
-                        <p>Actors: <%= data["Actors"] %></p>
+                        <p><span>Director:</span> <%= data["Director"] %></p>
+                        <p><span>Writer:</span> <%= data["Writer"] %></p>
+                        <p><span>Actors:</span> <%= data["Actors"] %></p>
                     </div>
                 </div>
             </div>
@@ -23,7 +25,7 @@
         <div class="row" id="ratings">
             <% data["Ratings"].forEach( function (rates) { %>
                 <div class="col-sm-4">
-                    <p><%= rates["Source"] %></p>
+                    <h5><%= rates["Source"] %></h5>
                     <p><%= rates["Value"] %></p>
                 </div>
             <% }); %>

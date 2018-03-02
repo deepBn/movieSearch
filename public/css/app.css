@@ -1,3 +1,15 @@
+/* body */
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+h1, h3, h5, span {
+    font-weight: 700;
+}
+
+/* navbar */
+
 .navbar-inverse .navbar-brand {
     color: #fff;
 }
@@ -5,6 +17,8 @@
 .navbar-inverse .navbar-nav>li>a {
     color: #fff;
 }
+
+/* landing page */
 
 #landing-container {
     text-align: center;
@@ -32,6 +46,8 @@ hr.style14 {
     min-width: 110px;
 }
 
+/* Search Page */
+
 #search-form {
     width: 30%;
     margin: 25px auto;
@@ -58,7 +74,7 @@ hr.style14 {
 
 /* details page */
 
-.thumbnail.right-caption > img {
+.thumbnail.right-caption>img {
     float: left;
     margin-right: 13px;
 }
@@ -67,8 +83,13 @@ hr.style14 {
     float: left;
 }
 
-.thumbnail.right-caption > .caption {
+.thumbnail.right-caption>.caption {
     padding: 20px;
+}
+
+#small-details {
+    font-size: 12px;
+    font-weight: 700;
 }
 
 #crew {
