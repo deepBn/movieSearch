@@ -45,6 +45,7 @@ hr.style14 {
     display: flex;
     flex-wrap: wrap;
     margin-top: 3%;
+    text-align: center;
 }
 
 .thumbnail {
@@ -53,4 +54,29 @@ hr.style14 {
 
 #thumb-img {
     height: 400px;
+}
+
+/* details page */
+
+.thumbnail.right-caption > img {
+    float: left;
+    margin-right: 13px;
+}
+
+.thumbnail.right-caption {
+    float: left;
+}
+
+.thumbnail.right-caption > .caption {
+    padding: 20px;
+}
+
+#crew {
+    margin-top: 4%;
+    float: left;
+}
+
+#ratings {
+    text-align: center;
+    clear: both;
 }

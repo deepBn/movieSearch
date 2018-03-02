@@ -1,0 +1,33 @@
+<% include partials/header %>
+    <div class="container">
+        <div class="row">
+            <div class="thumbnail right-caption col-sm-12">
+                <img src=<%= data["Poster"] %> alt="movie-image">
+                <div class="caption">
+                    <h3><%= data["Title"] %> (<%= data["Year"] %>)</h3>
+                    <p>
+                        <%= data["Rated"] %> | 
+                        <%= data["Runtime"] %> | 
+                        <%= data["Genre"] %> | 
+                        <%= data["Released"] %> ( <%= data["Country"] %> )
+                    </p>
+                    <p><%= data["Plot"] %></p>
+                    <div id="crew">
+                        <p>Director: <%= data["Director"] %></p>
+                        <p>Writer: <%= data["Writer"] %></p>
+                        <p>Actors: <%= data["Actors"] %></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" id="ratings">
+            <% data["Ratings"].forEach( function (rates) { %>
+                <div class="col-sm-4">
+                    <p><%= rates["Source"] %></p>
+                    <p><%= rates["Value"] %></p>
+                </div>
+            <% }); %>
+        </div>
+        
+    </div>
+<% include partials/footer %>
