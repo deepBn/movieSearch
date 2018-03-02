@@ -1,20 +1,18 @@
 <% include partials/header %>
-    <h1>Welcome to results page</h1>
-    <ol>
-        <% data["Search"].forEach( function (movies) { %>
-            <li>
-                <ul>
-                    <li>
+    <div class="container">
+        <h1>Welcome to results page</h1>
+            <div class="row" id="movies">
+                <% data["Search"].forEach( function (movies) { %>
+                <div class="col-md-3 col-sm-6">
+                    <div class="thumbnail">
                         <img src=<%= movies["Poster"] %>>
-                    </li>
-                    <li>
-                        <%= movies["Title"] %>
-                    </li>
-                    <li>
-                        <%= movies["Year"] %>
-                    </li>
-                </ul>
-            </li>
-        <% }); %>
-    </ol>
+                        <div class="caption">
+                            <p><%= movies["Title"] %></p>
+                            <p><%= movies["Year"] %></p>
+                        </div>
+                    </div>
+                </div>
+                <% }); %>
+            </div>
+    </div>
 <% include partials/footer %>

@@ -1,0 +1,13 @@
+#search-form {
+    width: 30%;
+    margin: 25px auto;
+}
+
+#search-h1 {
+    text-align: center;
+}
+
+#movies {
+    display: flex;
+    flex-wrap: wrap;
+}

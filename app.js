@@ -6,7 +6,11 @@ app.set("view engine", "ejs");
 
 var request = require("request");
 
-app.get("/", function (req, res) {
+app.get("/", function(req, res){
+    res.render("landing");
+});
+
+app.get("/search", function (req, res) {
     res.render("search");
 });
 
