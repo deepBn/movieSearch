@@ -6,7 +6,11 @@ app.set("view engine", "ejs");
 
 var request = require("request");
 
-app.get("/", function (req, res) {
+app.get("/", function(req, res){
+    res.render("landing");
+});
+
+app.get("/search", function (req, res) {
     res.render("search");
 });
 
@@ -17,6 +21,19 @@ app.get("/results", function (req, res) {
         if (!error && response.statusCode === 200) {
             var data = JSON.parse(body);
             res.render("results", {
+                data: data
+            });
+        }
+    });
+});
+
+app.get("/results/details/:title", function(req, res) {
+    var title = req.params.title;
+    var url = "http://www.omdbapi.com/?apikey=thewdb&plot=full&i=" + title;
+    request(url, function (error, response, body) {
+        if (!error && response.statusCode === 200) {
+            var data = JSON.parse(body);
+            res.render("details", {
                 data: data
             });
         }

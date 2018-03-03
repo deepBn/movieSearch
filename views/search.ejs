@@ -1,6 +1,19 @@
-<h1>Welcome to movie Database!</h1>
+<% include partials/header %>
 
-<form method="GET" action="/results">
-    <input type="text" name="search" placeholder="Enter Search Term">
-    <button>Search!</button>
-</form>
+<div class="container">
+    
+    <h1 id="search-h1">Search from our thousands of handpicked movies</h1>
+    
+    <div id="search-form">
+        <form method="GET" action="/results">
+            <div class="form-group">
+                <input type="text" name="search" placeholder="Enter Movie Name" class="form-control">
+            </div>
+            <div class="form-group">
+                <button class="btn btn-primary btn-lg btn-block"><i class="fas fa-search"></i> Search!</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<% include partials/footer %>
